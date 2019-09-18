@@ -33,7 +33,7 @@ I'd like to discuss how to further implement animations on the way the app scrol
 
 Here's a walkthrough of implemented user stories:
 
-<img src='X' title='tumblrVideo.gif' width='' alt='Video Walkthrough'/>
+<img src='X' title='video.gif' width='' alt='Video Walkthrough'/>
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
