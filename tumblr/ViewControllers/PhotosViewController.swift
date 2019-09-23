@@ -67,4 +67,21 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
 //        cell.textLabel?.text = "row: \(indexPath.row)"
 //        return cell
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! PhotoDetailsViewController
+        let cell = sender as! UITableViewCell
+        if let indexPath = tableView.indexPath(for: cell) {
+            let post = posts[indexPath.row]
+            if let photos = post["photos"] as? [[String: Any]] {
+                // 1.
+                let photo = photos[0]
+                // 2.
+                let originalSize = photo["original_size"] as! [String: Any]
+                // 3.
+                let urlString = originalSize["url"] as! String
+                // 4.
+                vc.photoUrlstring = urlString
+            }
+        }
+    }
 }
